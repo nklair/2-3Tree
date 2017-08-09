@@ -9,7 +9,7 @@ class Node:
 			i += 1
 		self.parent = parent
 
-	def insert(self, value, leftChild, rightChild):
+	def insert(self, value, leftChild=None, rightChild=None):
 		valIndex = 0
 		while valIndex < len(self.values):
 			if self.values[valIndex] > value:
@@ -59,7 +59,7 @@ class RootNode:
 		self.child = None
 		self.maxSize = size
 
-	def insert(self, value, leftChild, rightChild):
+	def insert(self, value, leftChild=None, rightChild=None):
 		newRoot = Node(self.maxSize, self)
 		# Make sure the children know their parent
 		if leftChild != None:
